@@ -13,7 +13,7 @@ public class WelcomeController {
     @GetMapping("/hello")
     public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
         model.addAttribute("message", name);
-        return "welcome";
+        return "welcome.html";
     }
 
 }
