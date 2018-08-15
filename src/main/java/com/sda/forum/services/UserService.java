@@ -37,7 +37,4 @@ public class UserService {
         userRepository.delete(user);
     }
 
-    public User updateUserPostsNumber(User user, int postNumber) {
-        return userRepository.customUpdateUserPostNumber(user,postNumber);
-    }
 }
