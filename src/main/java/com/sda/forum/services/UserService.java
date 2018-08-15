@@ -6,6 +6,8 @@ import com.sda.forum.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.transaction.Transactional;
+
 
 @Component
 public class UserService {
@@ -37,7 +39,8 @@ public class UserService {
         userRepository.delete(user);
     }
 
+    @Transactional
     public User updateUserPostsNumber(User user, int postNumber) {
-        return userRepository.customUpdateUserPostNumber(user,postNumber);
+        return userRepository.updateUserPostsNumber(user,postNumber);
     }
 }

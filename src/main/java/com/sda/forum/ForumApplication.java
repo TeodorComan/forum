@@ -17,7 +17,6 @@ public class ForumApplication {
 		User user = userService.readUser(1);
 
 		System.out.println(user);
-
 		userService.updateUserPostsNumber(user,200);
 
 		System.out.println(userService.readUser(1));
