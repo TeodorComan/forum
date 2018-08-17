@@ -4,10 +4,10 @@ package com.sda.forum.services;
 import com.sda.forum.entities.Post;
 import com.sda.forum.repositories.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 
-@Component
+@Service
 public class PostService {
 
     @Autowired
