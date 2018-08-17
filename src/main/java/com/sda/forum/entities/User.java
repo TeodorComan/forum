@@ -4,6 +4,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -97,7 +98,16 @@ public class User implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        List authorities = new ArrayList();
+
+        authorities.add(new GrantedAuthority() {
+            @Override
+            public String getAuthority() {
+                return "USER";
+            }
+        });
+
+        return authorities;
     }
 
     public String getPassword() {
